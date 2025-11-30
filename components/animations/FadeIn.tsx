@@ -1,7 +1,7 @@
 'use client';
 
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
 interface FadeInProps {
@@ -179,7 +179,7 @@ export function TextReveal({ text, className, delay = 0, once = true }: TextReve
   );
 }
 
-// Counter animation
+// Counter animation using useMotionValue
 interface CounterProps {
   from?: number;
   to: number;
@@ -197,27 +197,60 @@ export function Counter({
   suffix = '',
   prefix = '',
 }: CounterProps) {
+  const [count, setCount] = useState(from);
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isInView) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isInView]);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const startTime = Date.now();
+    const endTime = startTime + duration * 1000;
+
+    const updateCount = () => {
+      const now = Date.now();
+      const progress = Math.min((now - startTime) / (duration * 1000), 1);
+      const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+      const currentCount = from + (to - from) * easeOutProgress;
+      
+      setCount(Math.round(currentCount));
+
+      if (now < endTime) {
+        requestAnimationFrame(updateCount);
+      }
+    };
+
+    requestAnimationFrame(updateCount);
+  }, [isInView, from, to, duration]);
+
   return (
     <motion.span
+      ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       className={className}
     >
-      <motion.span
-        initial={{ count: from }}
-        whileInView={{ count: to }}
-        viewport={{ once: true }}
-        transition={{ duration, ease: 'easeOut' }}
-      >
-        {({ count }: { count: number }) => (
-          <>
-            {prefix}
-            {Math.round(count)}
-            {suffix}
-          </>
-        )}
-      </motion.span>
+      {prefix}
+      {count}
+      {suffix}
     </motion.span>
   );
 }

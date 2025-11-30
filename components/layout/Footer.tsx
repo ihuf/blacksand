@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { type Locale } from '@/i18n';
-import { Logo } from '@/components/ui/Logo';
 
 interface FooterProps {
   locale: Locale;
@@ -17,114 +17,55 @@ const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/blacksand', icon: LinkedInIcon },
 ];
 
-const quickLinks = [
-  { href: '/properties', key: 'properties' },
-  { href: '/about', key: 'about' },
-  { href: '/team', key: 'team' },
-  { href: '/blog', key: 'blog' },
-  { href: '/contact', key: 'contact' },
-];
-
 export function Footer({ locale }: FooterProps) {
   const t = useTranslations('footer');
   const tNav = useTranslations('navigation');
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black-50 border-t border-white/5">
+    <footer className="bg-black border-t border-white/5 relative" style={{ background: 'rgb(29, 31, 35)' }}>
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
+      
       {/* Main Footer */}
-      <div className="container-custom py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div className="container-custom py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
           {/* Brand Column */}
-          <div className="lg:col-span-1">
-            <Link href={`/${locale}`} className="inline-block mb-6">
-              <Logo className="h-10" />
-            </Link>
-            <p className="text-neutral-gray text-sm leading-relaxed mb-6">
-              {t('description')}
-            </p>
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-sand hover:text-black transition-all duration-300"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-6">{t('quickLinks')}</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.key}>
-                  <Link
-                    href={`/${locale}${link.href}`}
-                    className="text-neutral-gray hover:text-sand transition-colors duration-300"
-                  >
-                    {tNav(link.key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Link href={`/${locale}`} className="inline-block mb-4">
+              <Image
+                src="https://blacksand.sa/logo4.png"
+                alt="Blacksand Logo"
+                width={174}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </Link>
+            <div className="text-white text-sm leading-relaxed">
+              <p>{t('address.company')}</p>
+              <p>{t('address.poBox')}</p>
+              <p>{t('address.city')}</p>
+              <p>{t('address.country')}</p>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-6">{t('contactInfo')}</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPinIcon className="w-5 h-5 text-sand flex-shrink-0 mt-0.5" />
-                <span className="text-neutral-gray text-sm">
-                  King Fahd Road, Riyadh<br />
-                  Saudi Arabia
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <PhoneIcon className="w-5 h-5 text-sand flex-shrink-0" />
-                <a
-                  href="tel:+966500000000"
-                  className="text-neutral-gray text-sm hover:text-sand transition-colors"
-                >
-                  +966 50 000 0000
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <MailIcon className="w-5 h-5 text-sand flex-shrink-0" />
-                <a
-                  href="mailto:info@blacksand.sa"
-                  className="text-neutral-gray text-sm hover:text-sand transition-colors"
-                >
-                  info@blacksand.sa
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-white font-semibold mb-4">{t('contactInfo')}</h4>
+            <div className="text-white text-sm leading-relaxed pl-0">
+              <p>Tel. {t('contact.phone')}</p>
+              <p>{t('contact.email')}</p>
+              <p className="mt-4">{t('contact.hours')}</p>
+              <p>{t('contact.hoursValue')}</p>
+            </div>
           </div>
 
-          {/* Newsletter */}
+          {/* Company Description */}
           <div>
-            <h4 className="text-white font-semibold mb-6">{t('newsletter.title')}</h4>
-            <p className="text-neutral-gray text-sm mb-4">
-              Subscribe to get the latest properties and market updates.
+            <h4 className="text-white font-semibold mb-4">Blacksand</h4>
+            <p className="text-white/80 text-sm leading-relaxed">
+              {t('description')}
             </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder={t('newsletter.placeholder')}
-                className="input text-sm"
-              />
-              <button type="submit" className="btn-primary w-full text-sm">
-                {t('newsletter.button')}
-              </button>
-            </form>
           </div>
         </div>
       </div>
@@ -133,19 +74,19 @@ export function Footer({ locale }: FooterProps) {
       <div className="border-t border-white/5">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-neutral-gray text-sm">
+            <p className="text-gray-500 text-sm">
               {t('copyright', { year: currentYear })}
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href={`/${locale}/privacy`}
-                className="text-neutral-gray text-sm hover:text-sand transition-colors"
+                className="text-gray-500 text-sm hover:text-purple transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href={`/${locale}/terms`}
-                className="text-neutral-gray text-sm hover:text-sand transition-colors"
+                className="text-gray-500 text-sm hover:text-purple transition-colors"
               >
                 Terms of Service
               </Link>
@@ -154,6 +95,23 @@ export function Footer({ locale }: FooterProps) {
         </div>
       </div>
     </footer>
+  );
+}
+
+// Scroll to Top Button
+function ScrollToTopButton() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-[60px] right-[18px] w-[50px] h-[50px] bg-purple rounded-full flex items-center justify-center text-white hover:bg-purple-600 transition-colors z-50"
+      aria-label="Scroll to top"
+    >
+      <ArrowUpIcon className="w-5 h-5" />
+    </button>
   );
 }
 
@@ -182,27 +140,10 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
-function MapPinIcon({ className }: { className?: string }) {
+function ArrowUpIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-  );
-}
-
-function PhoneIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-    </svg>
-  );
-}
-
-function MailIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
   );
 }

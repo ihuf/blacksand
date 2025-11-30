@@ -1,123 +1,208 @@
 {
   "metadata": {
-    "title": "Black Sand | Premium Real Estate in Saudi Arabia",
-    "description": "Discover luxury properties and premium real estate in Saudi Arabia with Black Sand. Expert guidance for buying, selling, and investing in the Kingdom's finest properties."
+    "title": "Blacksand | Real Estate Development & Management in Saudi Arabia",
+    "description": "Discover Blacksand — a real estate partner driven by integrity, innovation, and enduring value. Creating exceptional homes, mixed-use developments and commercial properties throughout the Kingdom."
   },
   "navigation": {
     "home": "Home",
-    "properties": "Properties",
-    "about": "About",
-    "team": "Our Team",
-    "blog": "Blog",
+    "properties": "Projects",
+    "about": "Our Story",
+    "team": "Leaders",
+    "whatWeDo": "What We Do",
+    "blog": "Insights",
     "testimonials": "Testimonials",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Discover Your",
-    "titleHighlight": "Dream Property",
-    "subtitle": "Premium real estate experiences in Saudi Arabia's most prestigious locations",
+    "badge": "Real Estate Development & Management",
+    "title": "We Don't Just Build Developments",
+    "titleHighlight": "We Build Futures",
+    "subtitle": "Discover Blacksand — a real estate partner driven by integrity, innovation, and enduring value.",
     "cta": {
-      "explore": "Explore Properties",
+      "residential": "Interested in Residential",
+      "commercial": "Interested in Commercial",
+      "explore": "Explore Projects",
       "contact": "Get in Touch"
     }
   },
   "stats": {
-    "properties": "Properties Listed",
-    "clients": "Happy Clients",
-    "years": "Years Experience",
-    "cities": "Cities Covered"
+    "developments": "In Developments",
+    "years": "Years Heritage",
+    "projects": "Major Projects",
+    "vision": "Unified Vision"
   },
   "featured": {
-    "title": "Featured Properties",
-    "subtitle": "Handpicked premium properties for discerning buyers",
-    "viewAll": "View All Properties"
+    "title": "Our Projects",
+    "subtitle": "Delivering Purpose, Performance & Place",
+    "viewAll": "Explore Our Projects"
   },
   "about": {
-    "title": "About Black Sand",
-    "subtitle": "Your trusted partner in Saudi Arabian real estate",
-    "description": "With years of experience in the Saudi Arabian real estate market, Black Sand has established itself as a premier destination for luxury properties. Our commitment to excellence and personalized service sets us apart.",
-    "learnMore": "Learn More About Us"
+    "title": "Our Story",
+    "subtitle": "Rooted in legacy, building the future",
+    "description": "Rooted in 75+ years of heritage through Alabdullatif Holding Group, Blacksand is redefining real estate across Saudi Arabia. From community living to iconic landmarks, we transform land into lasting value.",
+    "learnMore": "Learn More About Us",
+    "mission": {
+      "title": "Mission",
+      "description": "Deliver exceptional value through excellence, integrity, and innovation."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To be Saudi Arabia's most trusted real estate developer."
+    },
+    "values": {
+      "title": "Values",
+      "description": "Excellence, Integrity, Commitment"
+    },
+    "standFor": {
+      "title": "Value Perfected",
+      "description": "A promise to deliver unmatched quality, care, and performance from design to long-term care."
+    }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive real estate solutions",
-    "buying": {
-      "title": "Property Buying",
-      "description": "Expert guidance through your property purchase journey"
+    "title": "What We Do",
+    "subtitle": "Full-Spectrum Real Estate Development",
+    "description": "We offer an integrated, turnkey model built around precision, flexibility, and care.",
+    "masterPlanning": {
+      "title": "Master Planning & Urban Design",
+      "description": "Comprehensive urban planning and design solutions"
     },
-    "selling": {
-      "title": "Property Selling",
-      "description": "Strategic marketing to maximize your property's value"
+    "feasibility": {
+      "title": "Feasibility & Budget Engineering",
+      "description": "Data-driven financial analysis and budget optimization"
     },
-    "investment": {
-      "title": "Investment Advisory",
-      "description": "Data-driven insights for smart real estate investments"
+    "construction": {
+      "title": "Construction & Procurement",
+      "description": "End-to-end construction management and procurement"
+    },
+    "sales": {
+      "title": "Sales & Leasing Strategy",
+      "description": "Strategic marketing and leasing solutions"
     },
     "management": {
-      "title": "Property Management",
-      "description": "Professional management services for property owners"
+      "title": "Property & Facility Management",
+      "description": "Professional property and facility management services"
+    }
+  },
+  "sectorExpertise": {
+    "title": "Sector Expertise",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "hospitality": "Hospitality",
+    "mixedUse": "Mixed-use",
+    "logistics": "Logistics",
+    "learnMore": "Learn More About Our Projects"
+  },
+  "transformation": {
+    "title": "Saudi Arabia's transformation is accelerating and Blacksand is helping shape it.",
+    "points": {
+      "homeownership": "Supporting 70% homeownership goals",
+      "smartCities": "Enabling smart cities & transit-oriented living",
+      "zones": "Activating untapped tourism, logistics, and industrial zones",
+      "vision2030": "Aligning with Vision 2030 and beyond"
+    },
+    "cta": "See How We Align with Vision 2030"
+  },
+  "leaders": {
+    "title": "Leaders",
+    "subtitle": "Meet the leaders driving over SAR 25 billion in transformational developments.",
+    "visionTitle": "Vision-Led. Value-Driven. Committed to Excellence.",
+    "visionDescription": "Led by seasoned experts in real estate, finance, and design, our leadership blends legacy trust with visionary ambition.",
+    "ceoMessage": {
+      "greeting": "Dear Visitors,",
+      "content": "At Blacksand, we believe real estate is more than buildings — it's about shaping lasting value for people and communities.\n\nOur legacy began over 75 years ago, built on craftsmanship, care, and trust. Today, we carry that legacy forward with a vision to contribute meaningfully to Saudi Arabia's transformation.\n\nWe're not just developing land — we're creating spaces where life happens, families grow, and futures begin. With every project, our promise is simple: build with purpose, deliver with integrity, and never compromise on quality.\n\nThank you for being part of this journey.",
+      "regards": "Warm regards,",
+      "name": "Omar bin Ahmed Al-Abdullatif",
+      "title": "CEO, BLACKSAND"
+    },
+    "socialImpact": {
+      "title": "We build for people — not just for profit.",
+      "points": {
+        "community": "Inclusive community design",
+        "youth": "Youth training & employment programs",
+        "sustainability": "Sustainability from concept to delivery",
+        "culture": "Cultural preservation"
+      }
     }
   },
   "testimonials": {
-    "title": "What Our Clients Say",
-    "subtitle": "Trusted by hundreds of satisfied clients"
+    "title": "What Our Partners Say",
+    "subtitle": "Trusted by leading organizations"
   },
   "cta": {
-    "title": "Ready to Find Your Perfect Property?",
-    "subtitle": "Let our experts help you discover your dream home in Saudi Arabia",
+    "title": "Ready to Build the Future Together?",
+    "subtitle": "Let our experts help you discover exceptional real estate opportunities in Saudi Arabia",
     "button": "Contact Us Today",
     "whatsapp": "Chat on WhatsApp"
   },
   "footer": {
-    "description": "Premium real estate services in Saudi Arabia. Discover luxury properties with Black Sand.",
+    "description": "Blacksand is a real estate development and management partner. We create and manage exceptional homes, mixed-use developments and commercial properties throughout the Kingdom.",
     "quickLinks": "Quick Links",
-    "contactInfo": "Contact Info",
+    "contactInfo": "Contact",
     "followUs": "Follow Us",
+    "address": {
+      "company": "Blacksand Company",
+      "poBox": "P.O. Box 859",
+      "city": "Riyadh 11421",
+      "country": "Kingdom of Saudi Arabia"
+    },
+    "contact": {
+      "phone": "00966 575 777 888",
+      "email": "info@blacksand.sa",
+      "hours": "Business Hours",
+      "hoursValue": "Sunday – Thursday 9:00am – 5:00pm"
+    },
     "newsletter": {
       "title": "Newsletter",
       "placeholder": "Enter your email",
       "button": "Subscribe"
     },
-    "copyright": "© {year} Black Sand. All rights reserved."
+    "copyright": "© {year} Blacksand. All rights reserved."
   },
-  "properties": {
-    "title": "Our Properties",
-    "subtitle": "Explore our exclusive collection of premium properties",
-    "filters": {
-      "all": "All",
-      "villa": "Villas",
-      "apartment": "Apartments",
-      "land": "Land",
-      "commercial": "Commercial"
-    },
-    "sort": {
-      "newest": "Newest First",
-      "priceHigh": "Price: High to Low",
-      "priceLow": "Price: Low to High",
-      "sizeHigh": "Size: Large to Small"
-    },
-    "card": {
-      "bedrooms": "Beds",
-      "bathrooms": "Baths",
-      "size": "sqm",
-      "viewDetails": "View Details"
-    },
-    "noResults": "No properties found matching your criteria"
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Delivering Purpose, Performance & Place",
+    "loadMore": "Load More Projects",
+    "viewProject": "View Project",
+    "items": {
+      "businessAddress": {
+        "title": "The Business Address",
+        "location": "Riyadh",
+        "type": "Transit-Oriented Development (TOD)",
+        "description": "A future-focused commercial hub in Riyadh, blending premium workspaces with walkable access and curated dining. Built around smart mobility and modern professional lifestyles."
+      },
+      "townCenter": {
+        "title": "Town Center",
+        "location": "Riyadh",
+        "type": "Mixed-Use Urban Core",
+        "description": "An urban village for everyday life — blending retail, services, hospitality, and wellness in a vibrant, family-friendly setting."
+      },
+      "americanExpress": {
+        "title": "American Express HQ",
+        "location": "Riyadh",
+        "type": "Corporate Real Estate",
+        "description": "A build-to-suit headquarters reflecting American Express's global standards. Delivered with precision and post-handover performance."
+      },
+      "residentialCommunities": {
+        "title": "Residential Communities",
+        "location": "Riyadh",
+        "type": "Lifestyle Housing",
+        "description": "Human-centered design meets practical living. Blacksand residences offer walkability, modern amenities, and elegant design at scale."
+      }
+    }
   },
-  "propertyDetail": {
+  "projectDetail": {
     "overview": "Overview",
     "features": "Features",
     "location": "Location",
-    "similarProperties": "Similar Properties",
-    "contactAgent": "Contact Agent",
-    "requestViewing": "Request Viewing",
-    "shareProperty": "Share Property",
-    "price": "Price",
-    "type": "Property Type",
+    "similarProjects": "Similar Projects",
+    "contactUs": "Contact Us",
+    "requestInfo": "Request Information",
+    "shareProject": "Share Project",
+    "type": "Project Type",
     "status": "Status",
-    "available": "Available",
-    "sold": "Sold",
-    "rented": "Rented"
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "planned": "Planned"
   },
   "contact": {
     "title": "Get in Touch",
@@ -141,8 +226,8 @@
     }
   },
   "team": {
-    "title": "Meet Our Team",
-    "subtitle": "Experienced professionals dedicated to your success",
+    "title": "Leaders",
+    "subtitle": "Meet the leaders driving over SAR 25 billion in transformational developments",
     "viewProfile": "View Profile"
   },
   "blog": {
@@ -152,9 +237,30 @@
     "categories": {
       "all": "All Posts",
       "market": "Market Updates",
-      "tips": "Buying Tips",
+      "development": "Development",
       "investment": "Investment",
-      "lifestyle": "Lifestyle"
+      "vision2030": "Vision 2030"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours"
     }
   },
   "common": {

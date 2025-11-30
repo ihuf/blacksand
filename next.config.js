@@ -12,6 +12,12 @@ const nextConfig = {
         port: '',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'blacksand.sa',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   // Enable experimental features for better performance

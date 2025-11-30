@@ -10,40 +10,64 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary Colors
+        // Primary Colors - Blacksand Purple & Gray Theme
         black: {
-          DEFAULT: '#0A0A0A',
-          50: '#1A1A1A',
-          100: '#141414',
-          200: '#0F0F0F',
-          300: '#0A0A0A',
-          400: '#050505',
-          500: '#000000',
+          DEFAULT: '#1D1F23',
+          50: '#2A2C31',
+          100: '#232528',
+          200: '#1D1F23',
+          300: '#17191C',
+          400: '#111315',
+          500: '#0B0C0E',
         },
+        // Primary Purple (Blacksand Brand)
+        purple: {
+          DEFAULT: '#8E61A5',
+          50: '#F5F0F7',
+          100: '#E8DCF0',
+          200: '#D1B9E1',
+          300: '#BA96D2',
+          400: '#A378BC',
+          500: '#8E61A5',
+          600: '#724E85',
+          700: '#563B64',
+          800: '#3A2843',
+          900: '#1E1422',
+        },
+        // Keep sand as alias for purple for backwards compatibility
         sand: {
-          DEFAULT: '#C9A962',
-          50: '#F5EFE0',
-          100: '#EDE3CC',
-          200: '#DDCCA3',
-          300: '#CDB57A',
-          400: '#C9A962',
-          500: '#B8944A',
-          600: '#9A7A3D',
-          700: '#7C6231',
-          800: '#5E4A25',
-          900: '#403219',
+          DEFAULT: '#8E61A5',
+          50: '#F5F0F7',
+          100: '#E8DCF0',
+          200: '#D1B9E1',
+          300: '#BA96D2',
+          400: '#A378BC',
+          500: '#8E61A5',
+          600: '#724E85',
+          700: '#563B64',
+          800: '#3A2843',
+          900: '#1E1422',
         },
-        gold: {
-          DEFAULT: '#C9A962',
-          deep: '#8B7355',
-          light: '#D4BC7E',
-        },
-        // Neutral Colors
+        // Neutral Gray Colors
         neutral: {
           white: '#FFFFFF',
           offWhite: '#F5F5F0',
-          gray: '#6B6B6B',
-          darkGray: '#2A2A2A',
+          gray: '#838A91',
+          darkGray: '#1D1F23',
+        },
+        // Gray scale
+        gray: {
+          DEFAULT: '#838A91',
+          50: '#F5F6F7',
+          100: '#E8EAEB',
+          200: '#D1D4D7',
+          300: '#B9BEC3',
+          400: '#A2A8AF',
+          500: '#838A91',
+          600: '#6B7178',
+          700: '#53585E',
+          800: '#3B3F44',
+          900: '#23262A',
         },
       },
       fontFamily: {
@@ -73,8 +97,9 @@ const config: Config = {
         '5xl': '2.5rem',
       },
       backgroundImage: {
-        'gradient-gold': 'linear-gradient(135deg, #C9A962 0%, #8B7355 100%)',
-        'gradient-dark': 'linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #8E61A5 0%, #724E85 100%)',
+        'gradient-purple': 'linear-gradient(135deg, #8E61A5 0%, #724E85 100%)',
+        'gradient-dark': 'linear-gradient(180deg, #1D1F23 0%, #2A2C31 100%)',
         'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
