@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, type Variants } from 'framer-motion';
-import { ReactNode } from 'react';
+import { motion, type Variants, useMotionValue, useTransform, animate } from 'framer-motion';
+import { ReactNode, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 interface FadeInProps {
@@ -197,6 +197,14 @@ export function Counter({
   suffix = '',
   prefix = '',
 }: CounterProps) {
+  const count = useMotionValue(from);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    const controls = animate(count, to, { duration, ease: 'easeOut' });
+    return controls.stop;
+  }, [count, to, duration]);
+
   return (
     <motion.span
       initial={{ opacity: 0 }}
@@ -204,20 +212,9 @@ export function Counter({
       viewport={{ once: true }}
       className={className}
     >
-      <motion.span
-        initial={{ count: from }}
-        whileInView={{ count: to }}
-        viewport={{ once: true }}
-        transition={{ duration, ease: 'easeOut' }}
-      >
-        {({ count }: { count: number }) => (
-          <>
-            {prefix}
-            {Math.round(count)}
-            {suffix}
-          </>
-        )}
-      </motion.span>
+      {prefix}
+      <motion.span>{rounded}</motion.span>
+      {suffix}
     </motion.span>
   );
 }
