@@ -1,5 +1,4 @@
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Inter, Plus_Jakarta_Sans, IBM_Plex_Sans_Arabic } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -23,29 +22,9 @@ const inter = Inter({
 });
 
 // Arabic font - IBM Plex Sans Arabic
-const ibmPlexArabic = localFont({
-  src: [
-    {
-      path: '../../public/fonts/IBMPlexSansArabic-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/IBMPlexSansArabic-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/IBMPlexSansArabic-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/IBMPlexSansArabic-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-ibm-plex-arabic',
   display: 'swap',
 });
