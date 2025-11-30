@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "title": "Black Sand | Premium Real Estate in Saudi Arabia",
+    "description": "Discover luxury properties and premium real estate in Saudi Arabia with Black Sand. Expert guidance for buying, selling, and investing in the Kingdom's finest properties."
+  },
+  "navigation": {
+    "home": "Home",
+    "properties": "Properties",
+    "about": "About",
+    "team": "Our Team",
+    "blog": "Blog",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Discover Your",
+    "titleHighlight": "Dream Property",
+    "subtitle": "Premium real estate experiences in Saudi Arabia's most prestigious locations",
+    "cta": {
+      "explore": "Explore Properties",
+      "contact": "Get in Touch"
+    }
+  },
+  "stats": {
+    "properties": "Properties Listed",
+    "clients": "Happy Clients",
+    "years": "Years Experience",
+    "cities": "Cities Covered"
+  },
+  "featured": {
+    "title": "Featured Properties",
+    "subtitle": "Handpicked premium properties for discerning buyers",
+    "viewAll": "View All Properties"
+  },
+  "about": {
+    "title": "About Black Sand",
+    "subtitle": "Your trusted partner in Saudi Arabian real estate",
+    "description": "With years of experience in the Saudi Arabian real estate market, Black Sand has established itself as a premier destination for luxury properties. Our commitment to excellence and personalized service sets us apart.",
+    "learnMore": "Learn More About Us"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive real estate solutions",
+    "buying": {
+      "title": "Property Buying",
+      "description": "Expert guidance through your property purchase journey"
+    },
+    "selling": {
+      "title": "Property Selling",
+      "description": "Strategic marketing to maximize your property's value"
+    },
+    "investment": {
+      "title": "Investment Advisory",
+      "description": "Data-driven insights for smart real estate investments"
+    },
+    "management": {
+      "title": "Property Management",
+      "description": "Professional management services for property owners"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Trusted by hundreds of satisfied clients"
+  },
+  "cta": {
+    "title": "Ready to Find Your Perfect Property?",
+    "subtitle": "Let our experts help you discover your dream home in Saudi Arabia",
+    "button": "Contact Us Today",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "footer": {
+    "description": "Premium real estate services in Saudi Arabia. Discover luxury properties with Black Sand.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "newsletter": {
+      "title": "Newsletter",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "copyright": "© {year} Black Sand. All rights reserved."
+  },
+  "properties": {
+    "title": "Our Properties",
+    "subtitle": "Explore our exclusive collection of premium properties",
+    "filters": {
+      "all": "All",
+      "villa": "Villas",
+      "apartment": "Apartments",
+      "land": "Land",
+      "commercial": "Commercial"
+    },
+    "sort": {
+      "newest": "Newest First",
+      "priceHigh": "Price: High to Low",
+      "priceLow": "Price: Low to High",
+      "sizeHigh": "Size: Large to Small"
+    },
+    "card": {
+      "bedrooms": "Beds",
+      "bathrooms": "Baths",
+      "size": "sqm",
+      "viewDetails": "View Details"
+    },
+    "noResults": "No properties found matching your criteria"
+  },
+  "propertyDetail": {
+    "overview": "Overview",
+    "features": "Features",
+    "location": "Location",
+    "similarProperties": "Similar Properties",
+    "contactAgent": "Contact Agent",
+    "requestViewing": "Request Viewing",
+    "shareProperty": "Share Property",
+    "price": "Price",
+    "type": "Property Type",
+    "status": "Status",
+    "available": "Available",
+    "sold": "Sold",
+    "rented": "Rented"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours"
+    }
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "subtitle": "Experienced professionals dedicated to your success",
+    "viewProfile": "View Profile"
+  },
+  "blog": {
+    "title": "Latest Insights",
+    "subtitle": "Stay updated with the latest real estate news and market trends",
+    "readMore": "Read More",
+    "categories": {
+      "all": "All Posts",
+      "market": "Market Updates",
+      "tips": "Buying Tips",
+      "investment": "Investment",
+      "lifestyle": "Lifestyle"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "back": "Go Back",
+    "viewMore": "View More",
+    "sar": "SAR"
+  }
+}
