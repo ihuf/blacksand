@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
 import { type Locale } from '@/i18n';
 import { FadeIn } from '@/components/animations/FadeIn';
 
@@ -15,9 +14,9 @@ export function CTA({ locale }: CTAProps) {
   const t = useTranslations('cta');
 
   return (
-    <section className="section relative overflow-hidden">
+    <section className="section relative overflow-hidden" style={{ background: 'rgb(29, 31, 35)' }}>
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black-50 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-black-50 to-black opacity-50" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -31,7 +30,7 @@ export function CTA({ locale }: CTAProps) {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-sand/10 blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-purple/10 blur-3xl"
         />
         <motion.div
           animate={{
@@ -43,7 +42,7 @@ export function CTA({ locale }: CTAProps) {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-sand/5 blur-3xl"
+          className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-purple/5 blur-3xl"
         />
       </div>
 
@@ -52,8 +51,8 @@ export function CTA({ locale }: CTAProps) {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(201, 169, 98, 0.1) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(201, 169, 98, 0.1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, rgba(142, 97, 165, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(142, 97, 165, 0.1) 1px, transparent 1px)`,
             backgroundSize: '40px 40px',
           }}
         />
@@ -85,7 +84,7 @@ export function CTA({ locale }: CTAProps) {
                 {t('button')}
               </Link>
               <a
-                href="https://wa.me/966500000000"
+                href="https://wa.me/966575777888"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-base px-8 py-4 w-full sm:w-auto inline-flex items-center justify-center gap-2"
@@ -98,18 +97,18 @@ export function CTA({ locale }: CTAProps) {
 
           {/* Trust indicators */}
           <FadeIn delay={0.3}>
-            <div className="mt-12 flex items-center justify-center gap-8 text-white/40 text-sm">
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-white/40 text-sm">
               <div className="flex items-center gap-2">
-                <CheckIcon className="w-5 h-5 text-sand" />
-                <span>Free Consultation</span>
+                <CheckIcon className="w-5 h-5 text-purple" />
+                <span>75+ Years Heritage</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckIcon className="w-5 h-5 text-sand" />
-                <span>Expert Guidance</span>
+                <CheckIcon className="w-5 h-5 text-purple" />
+                <span>SAR 25B+ Developments</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckIcon className="w-5 h-5 text-sand" />
-                <span>24/7 Support</span>
+                <CheckIcon className="w-5 h-5 text-purple" />
+                <span>Vision 2030 Aligned</span>
               </div>
             </div>
           </FadeIn>
@@ -117,8 +116,8 @@ export function CTA({ locale }: CTAProps) {
       </div>
 
       {/* Decorative corners */}
-      <div className="absolute top-8 left-8 w-20 h-20 border-l-2 border-t-2 border-sand/20 rounded-tl-3xl" />
-      <div className="absolute bottom-8 right-8 w-20 h-20 border-r-2 border-b-2 border-sand/20 rounded-br-3xl" />
+      <div className="absolute top-8 left-8 w-20 h-20 border-l-2 border-t-2 border-purple/20 rounded-tl-3xl" />
+      <div className="absolute bottom-8 right-8 w-20 h-20 border-r-2 border-b-2 border-purple/20 rounded-br-3xl" />
     </section>
   );
 }

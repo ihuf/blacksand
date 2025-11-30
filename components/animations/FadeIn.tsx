@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, type Variants, useMotionValue, useTransform, animate } from 'framer-motion';
-import { ReactNode, useEffect } from 'react';
+import { type ReactNode, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 interface FadeInProps {
@@ -179,7 +179,7 @@ export function TextReveal({ text, className, delay = 0, once = true }: TextReve
   );
 }
 
-// Counter animation
+// Counter animation using useMotionValue
 interface CounterProps {
   from?: number;
   to: number;

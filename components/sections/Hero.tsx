@@ -26,10 +26,10 @@ export function Hero({ locale }: HeroProps) {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
 
   const stats = [
-    { value: '500+', label: tStats('properties') },
-    { value: '1000+', label: tStats('clients') },
-    { value: '15+', label: tStats('years') },
-    { value: '10+', label: tStats('cities') },
+    { value: 'SAR 25B+', label: tStats('developments') },
+    { value: '75+', label: tStats('years') },
+    { value: '4+', label: tStats('projects') },
+    { value: '1', label: tStats('vision') },
   ];
 
   return (
@@ -37,21 +37,23 @@ export function Hero({ locale }: HeroProps) {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background */}
+      {/* Background with video support */}
       <motion.div
         style={{ scale }}
         className="absolute inset-0 z-0"
       >
-        {/* Video or Image Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black z-10" />
+        {/* Dark overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10" />
+        {/* Background image - can be replaced with video */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/images/hero-bg.jpg')`,
+            backgroundImage: `url('https://blacksand.sa/uploads/0a3073cc-fd1a-4732-9a06-c84802c39706.webp')`,
+            filter: 'brightness(0.7)',
           }}
         />
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-radial from-sand/5 via-transparent to-transparent opacity-50" />
+        {/* Animated gradient overlay with purple tint */}
+        <div className="absolute inset-0 bg-gradient-radial from-purple/10 via-transparent to-transparent opacity-60" />
       </motion.div>
 
       {/* Floating decorative elements */}
@@ -66,7 +68,7 @@ export function Hero({ locale }: HeroProps) {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-sand/10 blur-3xl"
+          className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-purple/10 blur-3xl"
         />
         <motion.div
           animate={{
@@ -78,7 +80,7 @@ export function Hero({ locale }: HeroProps) {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute bottom-1/4 right-10 w-48 h-48 rounded-full bg-sand/5 blur-3xl"
+          className="absolute bottom-1/4 right-10 w-48 h-48 rounded-full bg-purple/5 blur-3xl"
         />
       </div>
 
@@ -87,7 +89,7 @@ export function Hero({ locale }: HeroProps) {
         style={{ y, opacity }}
         className="relative z-20 container-custom text-center"
       >
-        {/* Pre-title */}
+        {/* Pre-title badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,12 +97,12 @@ export function Hero({ locale }: HeroProps) {
           className="mb-6"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-white/70">
-            <span className="w-2 h-2 rounded-full bg-sand animate-pulse" />
-            Premium Real Estate in Saudi Arabia
+            <span className="w-2 h-2 rounded-full bg-purple animate-pulse" />
+            {t('badge')}
           </span>
         </motion.div>
 
-        {/* Main Title */}
+        {/* Main Title - Blacksand tagline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -122,7 +124,7 @@ export function Hero({ locale }: HeroProps) {
           {t('subtitle')}
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons - Residential and Commercial */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -130,17 +132,16 @@ export function Hero({ locale }: HeroProps) {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href={`/${locale}/properties`}
+            href={`/${locale}/properties?type=residential`}
             className="btn-primary text-base px-8 py-4 group"
           >
-            <span>{t('cta.explore')}</span>
-            <ArrowIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <span>{t('cta.residential')}</span>
           </Link>
           <Link
-            href={`/${locale}/contact`}
-            className="btn-secondary text-base px-8 py-4"
+            href={`/${locale}/properties?type=commercial`}
+            className="btn-primary text-base px-8 py-4 group"
           >
-            {t('cta.contact')}
+            <span>{t('cta.commercial')}</span>
           </Link>
         </motion.div>
 
@@ -159,7 +160,7 @@ export function Hero({ locale }: HeroProps) {
               transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
               className="text-center"
             >
-              <div className="text-3xl md:text-4xl font-bold text-sand mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-purple mb-2">
                 {stat.value}
               </div>
               <div className="text-sm text-white/50">{stat.label}</div>
@@ -185,20 +186,11 @@ export function Hero({ locale }: HeroProps) {
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1 h-2 rounded-full bg-sand"
+              className="w-1 h-2 rounded-full bg-purple"
             />
           </div>
         </motion.div>
       </motion.div>
     </section>
-  );
-}
-
-// Arrow Icon
-function ArrowIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
   );
 }

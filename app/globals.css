@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS Variables */
+/* Custom CSS Variables - Blacksand Purple & Gray Theme */
 :root {
-  --color-black: #0A0A0A;
-  --color-black-50: #1A1A1A;
-  --color-sand: #C9A962;
-  --color-sand-deep: #8B7355;
+  --color-black: #1D1F23;
+  --color-black-50: #2A2C31;
+  --color-purple: #8E61A5;
+  --color-purple-deep: #724E85;
+  --color-purple-light: #A378BC;
+  /* Alias for backwards compatibility */
+  --color-sand: #8E61A5;
+  --color-sand-deep: #724E85;
   --color-white: #FFFFFF;
   --color-off-white: #F5F5F0;
-  --color-gray: #6B6B6B;
+  --color-gray: #838A91;
+  --color-gray-dark: #1D1F23;
   
   --font-sans: var(--font-plus-jakarta), system-ui, sans-serif;
   --font-arabic: var(--font-ibm-plex-arabic), system-ui, sans-serif;
@@ -81,7 +86,7 @@
   
   /* Text Gradient */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-gold;
+    @apply bg-clip-text text-transparent bg-gradient-purple;
   }
   
   /* Glass Effect */
