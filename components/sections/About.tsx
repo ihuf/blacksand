@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
 import { type Locale } from '@/i18n';
 import { FadeIn } from '@/components/animations/FadeIn';
 

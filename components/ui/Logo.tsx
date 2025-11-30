@@ -5,10 +5,9 @@ import { cn } from '@/lib/utils';
 
 interface LogoProps {
   className?: string;
-  variant?: 'full' | 'icon';
 }
 
-export function Logo({ className, variant = 'full' }: LogoProps) {
+export function Logo({ className }: LogoProps) {
   return (
     <div className={cn('flex items-center', className)}>
       {/* Blacksand Logo Image */}
